@@ -5,13 +5,16 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "readCSVFile": "node ./utils/csvToJsonConverter.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "csv-parser": "^3.1.0",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2"
   }
 }
