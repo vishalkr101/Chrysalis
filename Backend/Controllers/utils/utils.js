@@ -13,3 +13,15 @@ export const getJSONFileData = async () => {
         return res.status(500).json({ message: "Failed to load dish data" });
       }
 };
+
+export const getUniqueIngredients = (data) => {
+    const ingredients = new Set();
+  
+    data.forEach((dish) => {
+      dish.ingredients.forEach((ingredient) => {
+        ingredients.add(ingredient.toLowerCase()); // Making ingredients lowercase to avoid duplicates like "Rice" and "rice"
+      });
+    });
+  
+    return Array.from(ingredients);
+  };

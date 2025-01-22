@@ -1,0 +1,23 @@
+.dish-card-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.dish-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .dish-card h3 {
+    margin-top: 0;
+    font-size: 1.25em;
+  }
+  
+  .dish-card p {
+    margin: 4px 0;
+  }

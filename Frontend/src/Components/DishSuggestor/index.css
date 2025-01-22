@@ -1,0 +1,157 @@
+.dish-suggestor-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .search-container {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .ingredient-search-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .suggestions-list {
+    position: absolute;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    z-index: 10;
+  }
+  
+  .suggestion-item {
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background: #f0f0f0;
+  }
+  
+  .selected-ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .selected-ingredient {
+    background: #e0e0e0;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .remove-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .suggest-dishes-button {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .suggest-dishes-button:hover {
+    background: #0056b3;
+  }
+  
+  .dishes-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dish-item {
+    margin: 0.5rem 0;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  .dishes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .dish-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .dish-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dish-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+  
+  .dish-item p:first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .dish-item p:not(:first-child) {
+    color: #555;
+  }
+  
+  .dish-item p span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .dish-item .ingredients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .dish-item .ingredients span {
+    background-color: #e0e0e0;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .dish-item .dish-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .dish-item .dish-details p {
+    color: #777;
+  }
+  
+  .dish-item .dish-details p span {
+    color: #333;
+    font-weight: 600;
+  }
+  
