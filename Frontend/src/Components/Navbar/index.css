@@ -1,95 +1,89 @@
-/* Navbar container styling */
 .navbar-container {
-    display: flex;
-    justify-content: space-between; /* Align items to the ends */
-    align-items: center; /* Center items vertically */
-    padding: 10px 20px;
-    background-color: #333; /* Dark background */
-    color: white; /* Text color */
-    font-family: Arial, sans-serif;
-    height: 5vw;
-  }
-  
-  /* Logo styling */
-  .navbar-container > div:first-child {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 5vw;
+}
+
+.navbar-container > div:first-child {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dish-suggestor-link {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.dish-suggestor-link:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+.search-input-container {
+  position: relative;
+  width: 300px;
+  padding-right: 2vw;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25vw;
+    align-items: flex-start;
   }
 
-  .dish-suggestor-link {
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .dish-suggestor-link:hover {
-    text-decoration: underline;
-    color: gray
-  }
-  
-  /* Search input container styling */
   .search-input-container {
-    position: relative; /* For absolute positioning of suggestions */
-    width: 300px;
-    padding-right: 2vw;
+    width: 90%;
+    /* margin-top: 10px; */
   }
-  
-  /* Search input styling */
-  .search-input {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    font-size: 16px;
-    transition: border-color 0.3s;
-  }
-  
-  .search-input:focus {
-    border-color: #007bff;
-  }
-  
-  /* Suggestions list styling */
-  .suggestions-list {
-    position: absolute;
-    top: 100%; /* Place below the input */
-    left: 0;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    list-style: none;
-    padding: 0;
-    margin: 5px 0 0 0;
-    max-height: 200px;
-    overflow-y: auto;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Suggestion item styling */
-  .suggestion-item {
-    padding: 10px;
-    font-size: 14px;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .suggestion-item:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  /* Adjust for responsiveness */
-  @media (max-width: 768px) {
-    .navbar-container {
-      flex-direction: column; /* Stack logo and input vertically */
-      align-items: flex-start; /* Align items to the left */
-    }
-  
-    .search-input-container {
-      width: 100%; /* Make search input full width */
-      margin-top: 10px;
-    }
-  }
-  
+}

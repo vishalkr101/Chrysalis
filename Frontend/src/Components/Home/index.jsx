@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import "./index.css";
 import { DishContext } from "../Context";
 
 const HomePage = () => {
   const { dishes, loading, error } = useContext(DishContext);
 
-  const rowsPerPage = 10; // Number of rows per page
+   // Number of rows per page
+  const rowsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
 
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
@@ -57,13 +57,10 @@ const HomePage = () => {
   const indexOfLastRow = currentPage * rowsPerPage;
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
 
-  // Step 1: Get paginated data
   const currentDishes = dishes.slice(indexOfFirstRow, indexOfLastRow);
 
-  // Step 2: Filter the current page's data
   const filteredDishes = handleFilter(currentDishes);
 
-  // Step 3: Sort the filtered data
   const sortedFilteredDishes = getSortedData(filteredDishes);
 
   const handleNextPage = () => {
@@ -82,7 +79,7 @@ const HomePage = () => {
     if (sortConfig.key === key) {
       return sortConfig.direction === "asc" ? "🔼" : "🔽";
     }
-    return "↕️"; // Neutral icon for unsorted columns
+    return "↕️";
   };
 
   if (loading) return <div className="loading-text">Loading...</div>;

@@ -1,0 +1,45 @@
+.dish-details-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .dish-name {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .dish-info p {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .dish-info strong {
+    color: #555;
+  }
+  
+  .dish-details-container p {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .dish-details-container {
+      padding: 15px;
+    }
+  
+    .dish-name {
+      font-size: 1.5rem;
+    }
+  
+    .dish-info p {
+      font-size: 0.9rem;
+    }
+  }
+  

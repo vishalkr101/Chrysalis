@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./index.css";
 
 const DishDetails = () => {
   const { id } = useParams();
@@ -20,7 +21,12 @@ const DishDetails = () => {
     fetchDish();
   }, [id]);
 
-  if (!dish) return <div>Dish details not available...</div>;
+  if (!dish)
+    return (
+      <div className="dish-details-container">
+        Dish details not available...
+      </div>
+    );
 
   const name = dish.name === "-1" ? "" : dish.name;
   const ingredients =
@@ -32,33 +38,35 @@ const DishDetails = () => {
   const region = dish.region === "-1" ? "" : dish.region;
 
   return (
-    <div>
-      <h3>{dish.name}</h3>
-      {ingredients && (
-        <p>
-          <strong>Ingredients:</strong> {ingredients}
-        </p>
-      )}
-      {diet && (
-        <p>
-          <strong>Diet:</strong> {dish.diet}
-        </p>
-      )}
-      {flavor_profile && (
-        <p>
-          <strong>Flavor:</strong> {dish.flavor_profile}
-        </p>
-      )}
-      {state && (
-        <p>
-          <strong>State:</strong> {dish.state}
-        </p>
-      )}
-      {region && (
-        <p>
-          <strong>Region:</strong> {dish.region}
-        </p>
-      )}
+    <div className="dish-details-container">
+      <h3 className="dish-name">{dish.name}</h3>
+      <div className="dish-info">
+        {ingredients && (
+          <p>
+            <strong>Ingredients:</strong> {ingredients}
+          </p>
+        )}
+        {diet && (
+          <p>
+            <strong>Diet:</strong> {dish.diet}
+          </p>
+        )}
+        {flavor_profile && (
+          <p>
+            <strong>Flavor:</strong> {dish.flavor_profile}
+          </p>
+        )}
+        {state && (
+          <p>
+            <strong>State:</strong> {dish.state}
+          </p>
+        )}
+        {region && (
+          <p>
+            <strong>Region:</strong> {dish.region}
+          </p>
+        )}
+      </div>
     </div>
   );
 };
